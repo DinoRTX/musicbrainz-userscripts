@@ -8,7 +8,7 @@
 // @updateURL    https://github.com/DinoRTX/musicbrainz-userscripts/blob/main/mb-url-icons.user.js
 // @supportURL   https://github.com/DinoRTX/musicbrainz-userscripts/issues
 // @icon         https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/icon.png
-// @license      GNU GPL3
+// @license      GPL-3.0 license
 // @match        https://musicbrainz.org/*
 // @description  changes url to have a icon on musicbrainz.org NOTE this userscripts is designed for dark mode
 // @run-at       document-end
