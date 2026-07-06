@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name         MusicBrainz urls icons
+// @name         MusicBrainz external urls icons
 // @author       miau4+chatgpt (vibecoded cause im dumbass)
-// @namespace    https://github.com/
-// @version      4.1
-// @downloadURL  https://raw.githubusercontent.com/
-// @updateURL    aaa
-// @supportURL   aaa
-// @icon         aaa
+// @namespace    https://github.com/DinoRTX
+// @version      1.0
+// @downloadURL  https://github.com/DinoRTX/mb-url-icons/raw/refs/heads/main/mb-url-icons.user.js
+// @updateURL    https://github.com/DinoRTX/mb-url-icons/raw/refs/heads/main/mb-url-icons.user.js
+// @supportURL   https://github.com/DinoRTX/mb-url-icons/issues
+// @icon         still dont
 // @license      free as in freedom and as in price (gnu gpl v3 maybe?)
 // @match        https://musicbrainz.org/*
-// @description  changes url to have a icon on musicbrainz.org PLZ NOTE this userscripts is designed for dark mode
+// @description  changes url to have a icon on musicbrainz.org NOTE this userscripts is designed for dark mode
 // @run-at       document-end
 // @grant        none
 // ==/UserScript==
