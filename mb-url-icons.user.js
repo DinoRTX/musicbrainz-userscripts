@@ -3,11 +3,12 @@
 // @author       miau4+chatgpt (vibecoded cause im dumbass)
 // @namespace    https://github.com/DinoRTX
 // @version      1.0
+// @tag          ai-created
 // @downloadURL  https://github.com/DinoRTX/musicbrainz-userscripts/blob/main/mb-url-icons.user.js
 // @updateURL    https://github.com/DinoRTX/musicbrainz-userscripts/blob/main/mb-url-icons.user.js
 // @supportURL   https://github.com/DinoRTX/musicbrainz-userscripts/issues
-// @icon         still dont
-// @license      GNU GPLv3
+// @icon         https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/icon.png
+// @license      free as in freedom and as in price (gnu gpl v3 maybe?)
 // @match        https://musicbrainz.org/*
 // @description  changes url to have a icon on musicbrainz.org NOTE this userscripts is designed for dark mode
 // @run-at       document-end
