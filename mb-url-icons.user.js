@@ -9,7 +9,7 @@
 // @icon         aaa
 // @license      free as in freedom and as in price (gnu gpl v3 maybe?)
 // @match        https://musicbrainz.org/*
-// @description  changes url to have a icon on musicbrainz.org NOTE this userscripts is designed for dark mode
+// @description  changes url to have a icon on musicbrainz.org PLZ NOTE this userscripts is designed for dark mode
 // @run-at       document-end
 // @grant        none
 // ==/UserScript==
