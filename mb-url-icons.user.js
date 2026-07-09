@@ -2,15 +2,15 @@
 // @name         MusicBrainz external urls icons
 // @author       miau4+chatgpt (vibecoded cause im dumbass)
 // @namespace    https://github.com/DinoRTX
-// @version      1.0
+// @version      2
 // @tag          ai-created
 // @downloadURL  https://github.com/DinoRTX/musicbrainz-userscripts/blob/main/mb-url-icons.user.js
 // @updateURL    https://github.com/DinoRTX/musicbrainz-userscripts/blob/main/mb-url-icons.user.js
 // @supportURL   https://github.com/DinoRTX/musicbrainz-userscripts/issues
 // @icon         https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/icon.png
-// @license      GPL-3.0 license
+// @license      free as in freedom and as in price (gnu gpl v3 maybe?)
 // @match        https://musicbrainz.org/*
-// @description  changes url to have a icon on musicbrainz.org NOTE this userscripts is designed for dark mode
+// @description  short url replacing main service url with an icon on musicbrainz.org (tested and recommended on dark mode)
 // @run-at       document-end
 // @grant        none
 // ==/UserScript==
@@ -38,8 +38,8 @@
         boomplay: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/4722f0fa6048393abdb3cd47d16e5e4e8b270ee8/boomplay.svg",
         thwiki: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/thwiki.png",
         creativecommons: ICON("creativecommons", "FFFFFF"),
-        amazon: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/4722f0fa6048393abdb3cd47d16e5e4e8b270ee8/amazon.svg",
         amazonmusic: "https://upload.wikimedia.org/wikipedia/commons/9/92/Amazon_Music_logo.svg",
+        amazon: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/4722f0fa6048393abdb3cd47d16e5e4e8b270ee8/amazon.svg",
         revealed: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/c6edc6692e5118a84633f419ee1d4bd70465ce25/revealed.svg",
         audiomack: ICON("audiomack", "FFA200"),
         hdtracks: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/4722f0fa6048393abdb3cd47d16e5e4e8b270ee8/hdtracks.svg",
@@ -49,7 +49,9 @@
         allmusic: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/allmusic.png",
         rateyourmusic: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/4722f0fa6048393abdb3cd47d16e5e4e8b270ee8/rateyourmusic.svg",
         genius: ICON("genius", "FFFF64"),
-        itunes: ICON("itunes", "FB5BC5")
+        itunes: ICON("itunes", "FB5BC5"),
+        pandora: ICON("pandora", "224099"),
+        sevendigital: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/7digital.svg"
     };
 
     function getService(host) {
@@ -71,8 +73,8 @@
         if (host.includes("boomplay")) return "boomplay";
         if (host.includes("thwiki.cc")) return "thwiki";
         if (host.includes("creativecommons.org")) return "creativecommons";
-        if (host.includes("amazon")) return "amazon";
         if (host.includes("music.amazon")) return "amazonmusic";
+        if (host.includes("amazon")) return "amazon";
         if (host.includes("revealedrecordings")) return "revealed";
         if (host.includes("audiomack")) return "audiomack";
         if (host.includes("hdtracks")) return "hdtracks";
@@ -83,6 +85,8 @@
         if (host.includes("rateyourmusic")) return "rateyourmusic";
         if (host.includes("genius")) return "genius";
         if (host.includes("itunes.apple")) return "itunes";
+        if (host.includes("pandora")) return "pandora";
+        if (host.includes("uk.7digital")) return "sevendigital";
 
 
         return null;
@@ -90,7 +94,7 @@
 
     function process() {
 
-        document.querySelectorAll("#bottom-credits a[href], .annotation-body a[href]").forEach(a => {
+        document.querySelectorAll("a.wrap-anywhere[href]").forEach(a => {
 
             if (a.dataset.done) return;
             a.dataset.done = "1";
@@ -101,6 +105,9 @@
             } catch {
                 return;
             }
+
+            // ignorar enlaces internos de MusicBrainz
+            if (url.origin === location.origin) return;
 
             const host = url.hostname.replace(/^www\./, "");
             const service = getService(host);
