@@ -4,11 +4,11 @@
 // @namespace    https://github.com/DinoRTX
 // @version      2
 // @tag          ai-created
-// @downloadURL  https://github.com/DinoRTX/musicbrainz-userscripts/blob/main/mb-url-icons.user.js
-// @updateURL    https://github.com/DinoRTX/musicbrainz-userscripts/blob/main/mb-url-icons.user.js
+// @downloadURL  https://github.com/DinoRTX/musicbrainz-userscripts/raw/refs/heads/main/mb-url-icons.user.js
+// @updateURL    https://github.com/DinoRTX/musicbrainz-userscripts/raw/refs/heads/main/mb-url-icons.user.js
 // @supportURL   https://github.com/DinoRTX/musicbrainz-userscripts/issues
 // @icon         https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/icon.png
-// @license      free as in freedom and as in price (gnu gpl v3 maybe?)
+// @license      GPL-3.0
 // @match        https://musicbrainz.org/*
 // @description  short url replacing main service url with an icon on musicbrainz.org (tested and recommended on dark mode)
 // @run-at       document-end
