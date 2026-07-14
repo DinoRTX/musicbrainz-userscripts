@@ -2,7 +2,7 @@
 // @name         MusicBrainz external urls icons
 // @author       miau4+chatgpt (vibecoded cause im dumbass)
 // @namespace    https://github.com/DinoRTX
-// @version      2
+// @version      2.1
 // @tag          ai-created
 // @downloadURL  https://github.com/DinoRTX/musicbrainz-userscripts/raw/refs/heads/main/mb-url-icons.user.js
 // @updateURL    https://github.com/DinoRTX/musicbrainz-userscripts/raw/refs/heads/main/mb-url-icons.user.js
@@ -51,7 +51,8 @@
         genius: ICON("genius", "FFFF64"),
         itunes: ICON("itunes", "FB5BC5"),
         pandora: ICON("pandora", "224099"),
-        sevendigital: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/7digital.svg"
+        sevendigital: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/7digital.svg",
+        ia: ICON("internetarchive", "FFFFFF")
     };
 
     function getService(host) {
@@ -87,6 +88,7 @@
         if (host.includes("itunes.apple")) return "itunes";
         if (host.includes("pandora")) return "pandora";
         if (host.includes("uk.7digital")) return "sevendigital";
+        if (host.includes("archive.org")) return "ia";
 
 
         return null;
