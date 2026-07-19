@@ -2,7 +2,7 @@
 // @name         MusicBrainz external urls icons
 // @author       miau4+chatgpt (vibecoded cause im dumbass)
 // @namespace    https://github.com/DinoRTX
-// @version      2.1
+// @version      2.2
 // @tag          ai-created
 // @downloadURL  https://github.com/DinoRTX/musicbrainz-userscripts/raw/refs/heads/main/mb-url-icons.user.js
 // @updateURL    https://github.com/DinoRTX/musicbrainz-userscripts/raw/refs/heads/main/mb-url-icons.user.js
@@ -46,13 +46,14 @@
         dropbox: ICON("dropbox", "0061FF"),
         lastfm: ICON("lastdotfm", "D51007"),
         wikidata: ICON("wikidata", "006699"),
-        allmusic: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/allmusic.png",
+        allmusic: "",
         rateyourmusic: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/4722f0fa6048393abdb3cd47d16e5e4e8b270ee8/rateyourmusic.svg",
         genius: ICON("genius", "FFFF64"),
         itunes: ICON("itunes", "FB5BC5"),
         pandora: ICON("pandora", "224099"),
         sevendigital: "https://raw.githubusercontent.com/DinoRTX/musicbrainz-userscripts/refs/heads/main/7digital.svg",
-        ia: ICON("internetarchive", "FFFFFF")
+        ia: ICON("internetarchive", "FFFFFF"),
+        steam: ICON("steam","FFFFFF")
     };
 
     function getService(host) {
@@ -89,6 +90,7 @@
         if (host.includes("pandora")) return "pandora";
         if (host.includes("uk.7digital")) return "sevendigital";
         if (host.includes("archive.org")) return "ia";
+        if (host.includes("store.steampowered")) return "steam";
 
 
         return null;
